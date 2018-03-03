@@ -1,0 +1,14 @@
+<Configuration status="warn">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%t] %c: %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="warn">
+            <AppenderRef ref="STDOUT" />
+        </Root>
+        <Logger name="org.apache.chemistry.opencmis.s3" level="info"/>
+        <Logger name="org.apache.chemistry.opencmis.server.support.filter" level="info"/>
+    </Loggers>
+</Configuration>
